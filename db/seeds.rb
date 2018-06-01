@@ -8,6 +8,9 @@
 
 first_count = 1
 second_count = 1
+third_count = 1
+
+User.create!(username: Faker::Pokemon.name, email: "admin@admin.com", password: "password")
 
 100.times do
   puts "Seeding User #{first_count}"
@@ -19,4 +22,10 @@ end
   puts "Seeding Post #{second_count}"
   second_count += 1
   Post.create!(title: Faker::Company.bs, body: Faker::TheFreshPrinceOfBelAir.quote, user: User.all.sample)
+end
+
+5000.times do
+  puts "Seeding Comment #{third_count}"
+  third_count += 1
+  Comment.create!(title: Faker::SiliconValley.motto, body: Faker::SiliconValley.quote, user: User.all.sample, post: Post.all.sample)
 end
