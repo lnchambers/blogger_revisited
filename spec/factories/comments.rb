@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :comment do
     title "MyString"
     body "MyString"
-    user nil
-    post nil
+    user
+    post
   end
 end
