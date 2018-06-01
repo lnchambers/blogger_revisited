@@ -1,7 +1,4 @@
-<div class="nav">
-  <p><%= link_to "Login", new_user_session_path %></p>
-  <p><%= link_to "Register", new_user_registration_path %></p>
-</div>
 <div class="content">
   <p>Featured Blog Post</p>
+  <p><%= link_to @post.title, post_path(@post) %> by <%= @post.user.email %>
 </div>
