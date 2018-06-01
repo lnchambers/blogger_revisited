@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+first_count = 1
+second_count = 1
+
+100.times do
+  puts "Seeding User #{first_count}"
+  first_count += 1
+  User.create!(username: Faker::Pokemon.name, email: Faker::Internet.email, password: Faker::Company.bs)
+end
+
+1000.times do
+  puts "Seeding Post #{second_count}"
+  second_count += 1
+  Post.create!(title: Faker::Company.bs, body: Faker::TheFreshPrinceOfBelAir.quote, user: User.all.sample)
+end

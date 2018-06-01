@@ -31,6 +31,7 @@ gem 'rack-cors'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+gem 'faker'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -43,7 +44,6 @@ group :development, :test do
   gem 'nyan-cat-formatter'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
-  gem 'faker'
   gem 'database_cleaner'
   gem 'capybara'
 end

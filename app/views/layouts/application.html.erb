@@ -11,6 +11,10 @@
   <body>
     <p class="notice"><%= @notice %></p>
     <p class="alert"><%= @alert %></p>
+    <nav class="nav">
+      <%= render partial: "layouts/login" if current_user.nil? %>
+      <%= render partial: "layouts/logout" unless current_user.nil? %>
+    </nav>
     <%= yield %>
   </body>
 </html>
